@@ -1,110 +1,63 @@
 ---
 layout: post
-title:  "快速上手指南"
-date:   2016-05-31 23:19:00
-categories: 
-permalink: 
+title:  "Welcome to Jekyll and EasyBook"
+date:   2014-12-30 09:00:13
+categories: jekyll update
+permalink: /archivers/hello
 ---
 
-# 快速上手指南
+You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-## 安装到 GitHub Pages
+To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
-首先，你需要创建一个 GitHub Pages repo，[具体参考这里](https://pages.github.com/)。
+GitHub Flavored Markdown is supported.
 
-然后再在你的电脑终端（或 Git Bash）一句句地运行下列指令。这将会下载 EasyBook 并上传到你的 repo。
-
-```bash
-git clone https://github.com/laobubu/jekyll-theme-EasyBook.git easybook
-cd easybook
-git remote add blog git@github.com:foo/bar #注1
-git push -f -u blog gh-pages #注2
+```ruby
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
 ```
 
-1. 修改 `git@github.com:foo/bar` 为[你的 git remote URL](https://help.github.com/articles/which-remote-url-should-i-use/)
-2. 如果你的 repo 名字是 `xxxxx.github.io` 这种样子的，请将这一句换成以下两句指令：
+## EasyBook Advanced Functions ##
 
-```bash
-git checkout -b master
-git push -f -u blog master
-```
+You are using [EasyBook][github-easybook] the template from [laobubu.net](http://laobubu.net). Therefore some features are supported now:
 
-## 配置
+* **Pagination** is enabled.
+* **Disqus** or **多说** is ready.
+* **TOC** for posts is enabled.
+* **Profile** including your links and avatar on the sidebar.
+* *And more...*
 
-打开 `easybook` 文件夹并修改 `_config.yaml` 文件。
+> **Tips:** You can disable Disqus or 多说 on posts/pages by adding `nocomments: true` into [YAML Front Matter][frontmatter].
 
-注意 `url` 和 `baseurl` 字段。假设你的网站地址是 `http://laobubu.github.io/`，使用
+EasyBook uses upaiyun CDN to make everyone lncluding Chinese visitors feel speedy. You can find it in `_includes/footer.html` and change it to your favorite CDN like Google CDN.
 
-```yaml
-url: "http://laobubu.github.io"
-baseurl: ""
-```
+## Support me by... ##
 
-假设你的网站地址是 `http://laobubu.github.io/MarkdownIME/`, 用
+### Add a link ###
 
-```yaml
-url: "http://laobubu.github.io"
-baseurl: "/MarkdownIME"
-```
+EasyBook does not make the footer heavy; the link to theme could be on `about.md`:
 
-你也可以使用[你自己的域名](https://help.github.com/articles/setting-up-a-custom-subdomain/)。
+> This website is using [laobubu](http://laobubu.net)'s theme: [EasyBook](https://github.com/laobubu/jekyll-theme-EasyBook)
 
-## 撰写文章
+### Donate (PayPal or 支付宝) ###
 
-### 文件名和文件夹
+That's the best :smile: 
 
-文章应该保存在 `_posts` 文件夹。文件名遵循 `YYYY-MM-DD-TITLE.TYPE` 格式，例如：
+Please visit [http://laobubu.net/donate.html](http://laobubu.net/donate.html)
 
-- `2011-12-31-new-years-eve-is-awesome.md` *( md 意为 Markdown )*
-- `2012-01-17-hello-world.md`
+### Star and Fork on GitHub (free) ###
 
-### YAML Front Matter
+Not going to donate? That's okay. You can also send out your precious star [on GitHub][github-easybook].
 
-要让 Jekyll 正确地渲染你的帖子页面，请将 [YAML Front Matter](https://jekyllrb.com/docs/frontmatter/) 加到你的文章内容之前。例如这个最简短的例子：
+## And Here We Go ##
 
-```markdown
----
-layout: post
-title: Jekyll博客搭建指南
----
+Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
 
-大家好，今天我要讲讲如何使用 EasyBook 这一个 Jekyll 主题搭建一个博客...
-```
-
-当然，你还可以设置[其他的变量](https://jekyllrb.com/docs/frontmatter/#predefined-global-variables)，就像这样：
-
-```markdown
----
-layout: post
-title: Jekyll博客搭建指南
-categories: 
- - 博客
- - 技术贴
-permalink: /posts/1
-nocomments: true  # 用于屏蔽评论区，为 EasyBook 专属功能。
----
-
-大家好，今天我要讲讲如何使用 EasyBook 这一个 Jekyll 主题搭建一个博客...
-```
-
-### 了解更多
-
-阅读 <https://jekyllrb.com/docs/posts/>
-
-## 发布
-
-使用 `git commit` 和 `git push`，就像往常一样提交到 GitHub。就这样。
-
-## 升级你的 EasyBook
-
-执行以下指令将自动获取并应用最新的 EasyBook 补丁：
-
-```bash
-git pull origin gh-pages
-```
-
-## 捐赠
-
-如果你觉得 EasyBook 还不错的话，可以考虑包养我一顿饭钱，谢谢 :smiley: 
-
-访问 <http://laobubu.net/donate.html> 捐赠页面
+[jekyll]:      http://jekyllrb.com
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-help]: https://github.com/jekyll/jekyll-help
+[frontmatter]: http://jekyllrb.com/docs/frontmatter/
+[github-easybook]: https://github.com/laobubu/jekyll-theme-EasyBook
