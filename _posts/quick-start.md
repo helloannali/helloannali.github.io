@@ -1,3 +1,11 @@
+---
+layout: post
+title:  "快速上手指南"
+date:   2016-05-31 23:19:00
+categories: 
+permalink: 
+---
+
 # 快速上手指南
 
 ## 安装到 GitHub Pages
